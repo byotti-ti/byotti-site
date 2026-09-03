@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* =========================================================
+   Byotti — tokens da identidade visual
+   Azul luminoso institucional: #034AFE
+   Azul-marinho base:           #0C2340
+   ========================================================= */
+@theme {
+  --color-navy-950: #061c3d;
+  --color-navy-900: #0b2140;
+  --color-navy-850: #0c2340;
+  --color-navy-800: #12315a;
+  --color-navy-700: #1b365d;
+  --color-navy-600: #274a7a;
+
+  --color-brand-700: #0330a8;
+  --color-brand-600: #0340df;
+  --color-brand-500: #034afe;
+  --color-brand-400: #3d74ff;
+  --color-brand-300: #7ba0ff;
+
+  --color-ice-300: #98b6e4;
+  --color-ice-200: #c8d8eb;
+  --color-ice-100: #e6eefb;
+  --color-ice-50: #f3f7fd;
+
+  --font-display: var(--font-nexa), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-glow: 0 0 90px -18px rgba(3, 74, 254, 0.55);
+  --shadow-card: 0 18px 50px -24px rgba(12, 35, 64, 0.28);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-navy-850);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-navy-900);
+    line-height: 1.1;
+  }
+
+  ::selection {
+    background: var(--color-brand-500);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-x {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 72rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-x {
+      padding-inline: 2rem;
+    }
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-brand-500);
+  }
+}
+
+/* ---------- Reveal ----------
+   Animação de entrada desativada por padrão para garantir que o conteúdo
+   sempre apareça. Reative quando quiser (ver src/components/Reveal.tsx). */
+.reveal {
+  opacity: 1;
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
