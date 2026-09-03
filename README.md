@@ -41,10 +41,12 @@ public/
 
 ## O que ainda precisa ser definido (`src/lib/site.ts`)
 
-- [ ] Razão social + CNPJ para o rodapé
-- [ ] Cidade/estado corretos
-- [ ] @ do Instagram e URL do Facebook/LinkedIn
+- [x] Nome: **byotti Soluções em TI** · Cidade: **Teutônia/RS**
+- [x] Instagram: **@byotti.ti**
+- [x] Domínio **byotti.com.br** registrado no Registro.br
+- [ ] CNPJ no rodapé (opcional)
 - [ ] Confirmar telefone/WhatsApp: hoje `+55 (51) 9 9607-3922`
+- [ ] Facebook/LinkedIn, se existirem
 
 ## Formulário de contato (Resend)
 
@@ -74,8 +76,10 @@ Ver `.env.example`.
 3. Adicionar as variáveis de ambiente do Resend em *Settings → Environment
    Variables*.
 4. Deploy. Cada `git push` na branch principal publica automaticamente.
-5. Em *Settings → Domains*, adicionar `byotti.com.br` e `www.byotti.com.br`
-   e apontar o DNS conforme as instruções da Vercel.
+5. Em *Settings → Domains*, adicionar `byotti.com.br` e `www.byotti.com.br`.
+   No painel do **Registro.br** (DNS), criar os registros que a Vercel indicar
+   — normalmente um `A` de `byotti.com.br` para `76.76.21.21` e um `CNAME` de
+   `www` para `cname.vercel-dns.com`.
 
 ## Notas de identidade visual
 

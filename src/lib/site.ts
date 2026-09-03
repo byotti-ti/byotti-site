@@ -4,8 +4,8 @@
  */
 
 export const site = {
-  name: "Byotti",
-  legalName: "Byotti — Soluções em TI", // TODO: razão social + CNPJ para o rodapé
+  name: "byotti",
+  legalName: "byotti Soluções em TI", // TODO: acrescentar CNPJ no rodapé se desejar
   tagline: "Buy Your Own Transformation",
   description:
     "Consultoria e soluções em Tecnologia da Informação para empresas: suporte, redes, segurança, servidores, backup e nuvem. Invista em tecnologia e transforme o seu jeito de trabalhar.",
@@ -16,7 +16,7 @@ export const site = {
     email: "contato@byotti.com.br",
     phoneDisplay: "+55 (51) 9 9607-3922",
     phoneE164: "5551996073922", // usado no link do WhatsApp
-    city: "Porto Alegre", // TODO: confirmar cidade
+    city: "Teutônia",
     state: "RS",
   },
 
@@ -27,9 +27,9 @@ export const site = {
   },
 
   social: {
-    instagram: "https://instagram.com/byotti", // TODO: confirmar @
-    facebook: "https://facebook.com/byotti", // TODO: confirmar
-    linkedin: "", // TODO: se houver
+    instagram: "https://instagram.com/byotti.ti",
+    facebook: "", // sem página informada
+    linkedin: "", // sem página informada
   },
 } as const;
 
