@@ -67,7 +67,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${nexa.variable} ${openSans.variable}`}>
-      <body>
+      <body suppressHydrationWarning>
         {children}
         <Analytics />
       </body>
