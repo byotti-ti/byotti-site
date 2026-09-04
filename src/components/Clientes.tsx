@@ -18,15 +18,15 @@ export function Clientes() {
             {clientes.map((c) => (
               <li
                 key={c.name}
-                className="flex h-24 items-center justify-center rounded-xl border border-ice-200 bg-ice-50/50 px-6 grayscale transition-all duration-300 hover:grayscale-0 hover:border-brand-300 hover:bg-white"
+                className="flex h-28 items-center justify-center overflow-hidden rounded-2xl border border-ice-200 bg-white p-4 transition-shadow duration-300 hover:shadow-card"
               >
                 <Image
                   src={c.file}
                   alt={c.name}
                   title={c.name}
-                  width={200}
-                  height={64}
-                  className="max-h-12 w-auto object-contain"
+                  width={220}
+                  height={90}
+                  className="max-h-16 w-auto object-contain"
                 />
               </li>
             ))}

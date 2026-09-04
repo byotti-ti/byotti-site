@@ -37,9 +37,14 @@ export type Cliente = { name: string; file: string };
 export const clientes: Cliente[] = [
   { name: "Super Zart", file: "/clientes/zart.png" },
   { name: "American Nutrients", file: "/clientes/american.png" },
-  { name: "NZ-TEC", file: "/clientes/nztec.png" },
+  { name: "Mercado 3 Guris", file: "/clientes/3guris.jpeg" },
+  { name: "Super Cascata", file: "/clientes/supercascata.jpeg" },
+  { name: "Super Esquinão", file: "/clientes/super-esquinao.png" },
+  { name: "Casa Santo Nono", file: "/clientes/santonono.jpeg" },
+  { name: "Degasperi", file: "/clientes/degasperi.jpeg" },
+  { name: "Degasperi Florestal", file: "/clientes/degasperi-florestal.jpeg" },
   { name: "APDL — Assoc. Pró Desenvolvimento de Languiru", file: "/clientes/apdl.png" },
   { name: "Milkparts", file: "/clientes/milkparts.png" },
-  { name: "Super Esquinão", file: "/clientes/super-esquinao.png" },
-  { name: "Seja Momento GYM", file: "/clientes/SejaMomento3.png" },
+  { name: "NZ-TEC", file: "/clientes/nztec.png" },
+  { name: "Seja Momento GYM", file: "/clientes/seja-momento.png" },
 ];

@@ -3,7 +3,7 @@ import { clsx } from "clsx";
 
 type Variant = "gradient" | "light" | "dark";
 
-const strokeFor: Record<Variant, string> = {
+const fillFor: Record<Variant, string> = {
   gradient: "url(#byottiGrad)",
   light: "#e6eefb",
   dark: "#0c2340",
@@ -15,6 +15,10 @@ const wordFor: Record<Variant, string> = {
   dark: "text-navy-900",
 };
 
+/**
+ * Símbolo da Byotti: os dois "T" (Transformação + Tecnologia) entrelaçados,
+ * traço vazado, cantos arredondados e leve inclinação (movimento/agilidade).
+ */
 export function ByottiMark({
   variant = "gradient",
   className,
@@ -23,29 +27,40 @@ export function ByottiMark({
   className?: string;
 }) {
   return (
-    <svg
-      viewBox="0 0 48 48"
-      fill="none"
-      aria-hidden="true"
-      className={className}
-    >
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={className}>
       <defs>
-        <linearGradient id="byottiGrad" x1="4" y1="44" x2="44" y2="4" gradientUnits="userSpaceOnUse">
+        <linearGradient
+          id="byottiGrad"
+          x1="6"
+          y1="42"
+          x2="42"
+          y2="6"
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#0C2340" />
           <stop offset="1" stopColor="#034AFE" />
         </linearGradient>
+        <mask id="byottiMark">
+          <g transform="rotate(10 24 24)">
+            {/* união das 3 barras (branco = visível) */}
+            <rect x="19.6" y="6" width="9" height="37" rx="4.5" fill="#fff" />
+            <rect x="3.5" y="13.5" width="40" height="9" rx="4.5" fill="#fff" />
+            <rect x="13" y="27.5" width="30.5" height="8.6" rx="4.3" fill="#fff" />
+            {/* miolo vazado (preto = recorte) */}
+            <rect x="21.75" y="8.1" width="4.7" height="32.8" rx="2.35" fill="#000" />
+            <rect x="5.65" y="15.65" width="35.7" height="4.7" rx="2.35" fill="#000" />
+            <rect x="15.1" y="29.6" width="26.3" height="4.4" rx="2.2" fill="#000" />
+          </g>
+        </mask>
       </defs>
-      <g
-        stroke={strokeFor[variant]}
-        strokeWidth="5"
-        strokeLinecap="round"
-        transform="rotate(-8 24 24)"
-      >
-        <line x1="20" y1="3" x2="16" y2="45" />
-        <line x1="32" y1="3" x2="28" y2="45" />
-        <line x1="4" y1="17.5" x2="43" y2="15" />
-        <line x1="5" y1="32.5" x2="44" y2="30" />
-      </g>
+      <rect
+        x="0"
+        y="0"
+        width="48"
+        height="48"
+        fill={fillFor[variant]}
+        mask="url(#byottiMark)"
+      />
     </svg>
   );
 }

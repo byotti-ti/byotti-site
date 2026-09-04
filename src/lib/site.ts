@@ -8,7 +8,7 @@ export const site = {
   legalName: "byotti Soluções em TI", // TODO: acrescentar CNPJ no rodapé se desejar
   tagline: "Buy Your Own Transformation",
   description:
-    "Consultoria e soluções em Tecnologia da Informação para empresas: suporte, redes, segurança, servidores, backup e nuvem. Invista em tecnologia e transforme o seu jeito de trabalhar.",
+    "Consultoria e soluções em TI para empresas: suporte, redes, segurança, servidores, backup e nuvem. Invista em tecnologia e transforme o seu jeito de trabalhar.",
   url: "https://byotti.com.br",
   locale: "pt-BR",
 
@@ -16,8 +16,12 @@ export const site = {
     email: "contato@byotti.com.br",
     phoneDisplay: "+55 (51) 9 9607-3922",
     phoneE164: "5551996073922", // usado no link do WhatsApp
-    city: "Teutônia",
+    street: "Rua Carlos Jacob Kieling, 363 — Sala 106",
+    district: "Bairro Florestal",
+    city: "Lajeado",
     state: "RS",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Rua+Carlos+Jacob+Kieling+363+Sala+106+Florestal+Lajeado+RS",
   },
 
   whatsapp: {

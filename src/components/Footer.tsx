@@ -12,8 +12,8 @@ export function Footer() {
         <div>
           <Logo variant="light" href={null} />
           <p className="mt-4 max-w-xs text-sm text-ice-200">
-            Consultoria e soluções em Tecnologia da Informação. Invista em
-            tecnologia e transforme o seu jeito de trabalhar.
+            Consultoria e soluções em TI. Invista em tecnologia e transforme o
+            seu jeito de trabalhar.
           </p>
           <div className="mt-5 flex gap-3">
             {site.social.instagram && (
@@ -83,8 +83,10 @@ export function Footer() {
                 WhatsApp
               </a>
             </li>
-            <li className="text-ice-200/80">
-              {site.contact.city} / {site.contact.state}
+            <li className="pt-1 text-ice-200/80">
+              {site.contact.street}
+              <br />
+              {site.contact.district} — {site.contact.city}/{site.contact.state}
             </li>
           </ul>
         </div>

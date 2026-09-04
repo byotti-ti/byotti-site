@@ -1,8 +1,8 @@
 import { clsx } from "clsx";
 
 /**
- * Textura da marca: símbolo da Byotti repetido em baixo contraste.
- * Usar como camada de fundo em seções escuras.
+ * Textura da marca: símbolo da Byotti (dois "T") repetido em baixo contraste.
+ * Camada de fundo para seções escuras.
  */
 export function SymbolPattern({
   className,
@@ -23,16 +23,14 @@ export function SymbolPattern({
         <defs>
           <pattern
             id="byottiTexture"
-            width="72"
-            height="72"
+            width="88"
+            height="88"
             patternUnits="userSpaceOnUse"
-            patternTransform="rotate(-8)"
           >
-            <g stroke={stroke} strokeWidth="3" strokeLinecap="round" fill="none">
-              <line x1="28" y1="14" x2="24" y2="58" />
-              <line x1="40" y1="14" x2="36" y2="58" />
-              <line x1="16" y1="26" x2="52" y2="23" />
-              <line x1="17" y1="40" x2="53" y2="37" />
+            <g transform="translate(20 20) rotate(10 24 24) scale(0.9)" fill={stroke}>
+              <rect x="19.6" y="6" width="9" height="37" rx="4.5" />
+              <rect x="3.5" y="13.5" width="40" height="9" rx="4.5" />
+              <rect x="13" y="27.5" width="30.5" height="8.6" rx="4.3" />
             </g>
           </pattern>
         </defs>

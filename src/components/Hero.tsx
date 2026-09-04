@@ -1,4 +1,4 @@
-import { ArrowRight, PhoneCall } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SymbolPattern } from "./SymbolPattern";
 import { Reveal } from "./Reveal";
 import { whatsappUrl } from "@/lib/site";
@@ -27,7 +27,7 @@ export function Hero() {
           <Reveal>
             <span className="eyebrow text-brand-300">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
-              Soluções em Tecnologia da Informação
+              Soluções em TI
             </span>
           </Reveal>
 
@@ -59,9 +59,8 @@ export function Hero() {
               </a>
               <a
                 href="#servicos"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-3.5 text-sm font-bold text-white transition-colors hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-bold text-white transition-colors hover:bg-white/10"
               >
-                <PhoneCall className="h-4 w-4" />
                 Conhecer os serviços
               </a>
             </div>

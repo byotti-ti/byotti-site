@@ -85,24 +85,33 @@ export function Contato() {
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-sm font-semibold text-navy-900 hover:text-brand-600"
             >
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366] text-white">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-navy-900 text-white">
                 <MessageCircle className="h-5 w-5" />
               </span>
               Chamar no WhatsApp
             </a>
-            <p className="flex items-center gap-3 text-sm text-navy-700">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-ice-200 text-navy-900">
+            <a
+              href={site.contact.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 text-sm font-semibold text-navy-900 hover:text-brand-600"
+            >
+              <span className="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-navy-900 text-white">
                 <MapPin className="h-5 w-5" />
               </span>
-              {site.contact.city} / {site.contact.state}
-            </p>
+              <span className="font-normal text-navy-700">
+                {site.contact.street}
+                <br />
+                {site.contact.district} — {site.contact.city}/{site.contact.state}
+              </span>
+            </a>
           </div>
         </div>
 
         <div className="rounded-2xl border border-ice-200 bg-white p-6 shadow-card sm:p-8">
           {status === "ok" ? (
             <div className="flex h-full min-h-[20rem] flex-col items-center justify-center text-center">
-              <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366]/15 text-[#1a9c4b]">
+              <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-500/12 text-brand-600">
                 <Check className="h-7 w-7" />
               </span>
               <h3 className="mt-4 text-xl">Mensagem enviada!</h3>

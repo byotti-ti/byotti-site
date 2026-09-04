@@ -22,6 +22,7 @@ const jsonLd = {
   description: site.description,
   address: {
     "@type": "PostalAddress",
+    streetAddress: site.contact.street,
     addressLocality: site.contact.city,
     addressRegion: site.contact.state,
     addressCountry: "BR",
