@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 import { whatsappUrl } from "@/lib/site";
 
 const stats = [
-  { value: "+10 anos", label: "de experiência em TI" },
+  { value: "+15 anos", label: "de experiência em TI" },
   { value: "SLA", label: "atendimento com prazo garantido" },
   { value: "24/7", label: "monitoramento de ambiente" },
 ];
