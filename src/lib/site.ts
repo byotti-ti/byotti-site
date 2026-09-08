@@ -14,8 +14,8 @@ export const site = {
 
   contact: {
     email: "contato@byotti.com.br",
-    phoneDisplay: "+55 (51) 9 9607-3922",
-    phoneE164: "5551996073922", // usado no link do WhatsApp
+    phoneDisplay: "+55 (51) 99866-3850",
+    phoneE164: "5551998663850", // usado no link do WhatsApp
     street: "Rua Carlos Jacob Kieling, 363 — Sala 106",
     district: "Bairro Florestal",
     city: "Lajeado",
@@ -25,7 +25,7 @@ export const site = {
   },
 
   whatsapp: {
-    number: "5551996073922",
+    number: "5551998663850",
     message:
       "Olá! Vim pelo site da Byotti e gostaria de falar sobre soluções em TI para a minha empresa.",
   },
