@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Servicos } from "@/components/Servicos";
 import { ComoTrabalhamos } from "@/components/ComoTrabalhamos";
+import { Frentes } from "@/components/Frentes";
+import { IaAutomacao } from "@/components/IaAutomacao";
 import { Clientes } from "@/components/Clientes";
 import { Depoimentos } from "@/components/Depoimentos";
 import { Contato } from "@/components/Contato";
@@ -36,6 +38,10 @@ const jsonLd = {
     "Backup",
     "Computação em nuvem",
     "Microsoft 365",
+    "Automação de processos",
+    "Inteligência Artificial aplicada a empresas",
+    "Integração entre sistemas",
+    "Desenvolvimento de software sob medida",
   ],
 };
 
@@ -52,6 +58,8 @@ export default function Home() {
         <Hero />
         <Servicos />
         <ComoTrabalhamos />
+        <Frentes />
+        <IaAutomacao />
         <Clientes />
         <Depoimentos />
         <Contato />

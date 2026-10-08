@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { Logo } from "./Logo";
 import { InstagramIcon, FacebookIcon, LinkedinIcon } from "./SocialIcons";
-import { site, navLinks, whatsappUrl } from "@/lib/site";
+import { site, navLinks, iaPageHref, whatsappUrl } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -12,8 +13,9 @@ export function Footer() {
         <div>
           <Logo variant="light" href={null} />
           <p className="mt-4 max-w-xs text-sm text-ice-200">
-            Consultoria e soluções em TI. Invista em tecnologia e transforme o
-            seu jeito de trabalhar.
+            Infraestrutura, segurança, automação e Inteligência Artificial
+            para empresas. Invista em tecnologia e transforme o seu jeito de
+            trabalhar.
           </p>
           <div className="mt-5 flex gap-3">
             {site.social.instagram && (
@@ -62,6 +64,11 @@ export function Footer() {
                 </a>
               </li>
             ))}
+            <li>
+              <Link href={iaPageHref} className="text-sm text-ice-200 hover:text-white">
+                Inteligência Artificial e Automação
+              </Link>
+            </li>
           </ul>
         </nav>
 

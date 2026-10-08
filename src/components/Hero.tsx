@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { SymbolPattern } from "./SymbolPattern";
 import { Reveal } from "./Reveal";
-import { whatsappUrl } from "@/lib/site";
+import { ProcessFlow } from "./ProcessFlow";
+import { automacaoWhatsappUrl, iaPageHref, whatsappUrl } from "@/lib/site";
 
 const stats = [
   { value: "+15 anos", label: "de experiência em TI" },
@@ -22,7 +23,7 @@ export function Hero() {
         className="pointer-events-none absolute bottom-[-12rem] left-[-8rem] h-[28rem] w-[28rem] rounded-full bg-brand-600/20 blur-[120px]"
       />
 
-      <div className="container-x relative grid gap-16 pb-24 pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-32 lg:pt-44">
+      <div className="container-x relative grid gap-16 pb-14 pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-16 lg:pt-44">
         <div>
           <Reveal>
             <span className="eyebrow text-brand-300">
@@ -39,10 +40,10 @@ export function Hero() {
 
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-ice-200">
-              A Byotti cuida da TI da sua empresa de ponta a ponta — suporte,
-              redes, servidores, segurança, backup e nuvem — com atendimento
-              personalizado e um plano de trabalho planejado para o seu
-              ambiente.
+              A Byotti cuida da TI da sua empresa de ponta a ponta —
+              infraestrutura, redes, segurança, backup e nuvem — e também
+              desenvolve soluções com automação e Inteligência Artificial para
+              tirar o trabalho manual da sua equipe.
             </p>
           </Reveal>
 
@@ -64,6 +65,18 @@ export function Hero() {
                 Conhecer os serviços
               </a>
             </div>
+            <p className="mt-5 text-sm text-ice-200">
+              Tem um processo manual na sua empresa?{" "}
+              <a
+                href={automacaoWhatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1 font-bold text-white underline decoration-brand-400 decoration-2 underline-offset-4 transition-colors hover:text-brand-300"
+              >
+                Quero automatizar um processo
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+              </a>
+            </p>
           </Reveal>
         </div>
 
@@ -80,6 +93,35 @@ export function Hero() {
                 <div className="mt-1 text-sm text-ice-200">{s.label}</div>
               </div>
             ))}
+          </div>
+        </Reveal>
+      </div>
+
+      {/* Nova frente: a tecnologia que a empresa já usa passa a trabalhar por ela */}
+      <div className="container-x relative pb-20 lg:pb-24">
+        <Reveal delay={0.15}>
+          <div className="grid gap-8 rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur sm:p-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-12">
+            <div>
+              <p className="font-display text-xl font-bold leading-snug text-white sm:text-2xl">
+                Sua empresa já usa tecnologia.{" "}
+                <span className="text-brand-300">
+                  Agora faça a tecnologia trabalhar por você.
+                </span>
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-ice-200 sm:text-base">
+                A Byotti desenvolve soluções personalizadas com Inteligência
+                Artificial para automatizar processos, conectar sistemas e
+                facilitar o trabalho dentro das empresas.
+              </p>
+              <a
+                href={iaPageHref}
+                className="group mt-5 inline-flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-brand-300"
+              >
+                Conhecer nossas soluções
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
+            </div>
+            <ProcessFlow className="lg:justify-self-end" />
           </div>
         </Reveal>
       </div>

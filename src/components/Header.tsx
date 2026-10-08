@@ -36,7 +36,7 @@ export function Header() {
       <div className="container-x flex h-20 items-center justify-between py-3">
         <Logo variant="light" />
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
           {navLinks.map((l) => (
             <a
               key={l.href}

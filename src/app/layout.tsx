@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     "segurança da informação",
     "servidores",
     "Microsoft 365",
-    "Porto Alegre",
+    "automação de processos",
+    "inteligência artificial para empresas",
+    "integração de sistemas",
+    "Lajeado",
+    "Vale do Taquari",
   ],
   authors: [{ name: "Byotti" }],
   openGraph: {

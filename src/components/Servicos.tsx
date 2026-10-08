@@ -1,6 +1,7 @@
 import { Reveal } from "./Reveal";
+import { SymbolPattern } from "./SymbolPattern";
 import { servicos } from "@/lib/servicos";
-import { whatsappUrl } from "@/lib/site";
+import { automacaoWhatsappUrl, whatsappUrl } from "@/lib/site";
 import { ArrowRight } from "lucide-react";
 
 export function Servicos() {
@@ -52,6 +53,42 @@ export function Servicos() {
             Solicitar um orçamento
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </a>
+        </Reveal>
+
+        {/* Ponte para a frente de IA e automação */}
+        <Reveal className="mt-16">
+          <div className="relative overflow-hidden rounded-2xl bg-navy-900 px-6 py-8 text-white sm:px-10 sm:py-10">
+            <SymbolPattern opacity={0.06} />
+            <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-xl lg:max-w-lg">
+                <span className="eyebrow text-brand-300">Além da infraestrutura</span>
+                <p className="mt-3 font-display text-xl font-bold leading-snug text-white sm:text-2xl">
+                  Tem um processo manual que toma o tempo da sua equipe?
+                </p>
+                <p className="mt-2 text-ice-200">
+                  A Byotti também desenvolve automações e soluções com
+                  Inteligência Artificial sob medida para a sua empresa.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:shrink-0 lg:flex-col lg:items-stretch">
+                <a
+                  href={automacaoWhatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand-500 px-7 py-3.5 text-sm font-bold text-white shadow-glow transition-transform hover:-translate-y-0.5"
+                >
+                  Quero automatizar um processo
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </a>
+                <a
+                  href="#ia-automacao"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/20 px-7 py-3.5 text-sm font-bold text-white transition-colors hover:bg-white/10"
+                >
+                  Saiba mais
+                </a>
+              </div>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>

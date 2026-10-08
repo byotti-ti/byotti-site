@@ -10,7 +10,15 @@ import { site, whatsappUrl } from "@/lib/site";
 
 type Status = "idle" | "sending" | "ok" | "error";
 
-export function Contato() {
+type ContatoProps = {
+  title?: string;
+  text?: string;
+};
+
+export function Contato({
+  title = "Vamos conversar sobre a TI da sua empresa",
+  text = "Conte o seu cenário e o que você precisa resolver. Retornamos com um diagnóstico inicial e os próximos passos.",
+}: ContatoProps) {
   const [status, setStatus] = useState<Status>("idle");
   const [serverError, setServerError] = useState<string | null>(null);
 
@@ -52,13 +60,8 @@ export function Contato() {
       <div className="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div>
           <span className="eyebrow">Contato</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl">
-            Vamos conversar sobre a TI da sua empresa
-          </h2>
-          <p className="mt-4 text-lg text-navy-700">
-            Conte o seu cenário e o que você precisa resolver. Retornamos com um
-            diagnóstico inicial e os próximos passos.
-          </p>
+          <h2 className="mt-4 text-3xl sm:text-4xl">{title}</h2>
+          <p className="mt-4 text-lg text-navy-700">{text}</p>
 
           <div className="mt-8 space-y-4">
             <a
