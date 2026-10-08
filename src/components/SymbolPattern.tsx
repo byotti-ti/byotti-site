@@ -1,7 +1,13 @@
 import { clsx } from "clsx";
+import { SYMBOL_PATH, SYMBOL_SIZE } from "@/lib/symbol-path";
+
+const TILE = 96;
+const MARK = 44;
+const SCALE = MARK / SYMBOL_SIZE;
 
 /**
- * Textura da marca: símbolo da Byotti (dois "T") repetido em baixo contraste.
+ * Textura da marca: símbolo oficial da Byotti repetido em grade alternada
+ * (como na textura do manual de identidade), em baixo contraste.
  * Camada de fundo para seções escuras.
  */
 export function SymbolPattern({
@@ -23,14 +29,19 @@ export function SymbolPattern({
         <defs>
           <pattern
             id="byottiTexture"
-            width="88"
-            height="88"
+            width={TILE}
+            height={TILE}
             patternUnits="userSpaceOnUse"
           >
-            <g transform="translate(20 20) rotate(10 24 24) scale(0.9)" fill={stroke}>
-              <rect x="19.6" y="6" width="9" height="37" rx="4.5" />
-              <rect x="3.5" y="13.5" width="40" height="9" rx="4.5" />
-              <rect x="13" y="27.5" width="30.5" height="8.6" rx="4.3" />
+            <g fill={stroke} fillRule="evenodd">
+              <path
+                d={SYMBOL_PATH}
+                transform={`translate(4 4) scale(${SCALE})`}
+              />
+              <path
+                d={SYMBOL_PATH}
+                transform={`translate(${TILE / 2 + 4} ${TILE / 2 + 4}) scale(${SCALE})`}
+              />
             </g>
           </pattern>
         </defs>
